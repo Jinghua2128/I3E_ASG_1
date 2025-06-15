@@ -124,5 +124,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 1
-  collectSound: {fileID: 8300000, guid: b5ad09bdd4ea5774fa0c2129f0441e19, type: 3}
+  collectSound: {fileID: 8300000, guid: 6f1ecc60c6a1ac84292eb45d361cf654, type: 3}
   audioSource: {fileID: 0}
