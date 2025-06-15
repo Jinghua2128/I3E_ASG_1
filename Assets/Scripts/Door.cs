@@ -11,6 +11,10 @@ public class Door : MonoBehaviour
     public GameObject interactionText;
     public TMP_Text messageText;
 
+    [Header("Sound")]
+    public AudioClip doorOpenSound;
+    public AudioSource audioSource;
+
     private bool playerInRange = false;
     private GameManager gameManager;
     private bool doorOpened = false;
@@ -36,6 +40,15 @@ public class Door : MonoBehaviour
                 closedDoor.SetActive(false);
                 openDoor.SetActive(true);
                 doorOpened = true;
+
+                // Play sound
+                if (doorOpenSound != null)
+                {
+                    if (audioSource != null)
+                        audioSource.PlayOneShot(doorOpenSound);
+                    else
+                        AudioSource.PlayClipAtPoint(doorOpenSound, transform.position);
+                }
 
                 if (interactionText != null)
                     interactionText.SetActive(false);
