@@ -1,112 +1,107 @@
-I3E Assignment 1 – 3D Virtual Player Experience
-📘 Project Info
-🎓 Course: Diploma in Immersive Media & Game Design
+# I3E Assignment 1 ReadMe
 
-🧑‍💻 Student Name: [Your Name]
+**Student Name:** Liu GuangXuan  
+**Course:** Diploma in Immersive Media
+**Assignment:** I3E Assignment 1
+**Date:** 15 June 2025
 
-📆 Semester: Year 2 (2024/25), Semester 2.1
+---
 
-🛠 Platform: Unity 2022+ (Windows Desktop)
+## 🎮 Game Overview
+In this 3D immersive experience, you play as a skeleton trapped inside a dungeon. To escape, you must:
 
-💾 Repository Link: [Insert GitHub Repository URL Here]
+- Collect 3 relics hidden across indoor and outdoor areas.
+- Unlock a box to reveal the key.
+- Use the key to open the main door.
+- Collect the final crystal from the dome hall to win the game.
 
-🎮 Game Description
-This is a first-person 3D player experience featuring:
+---
 
-A fully explorable indoor and outdoor environment
+## 🕹️ Controls
 
-Interactable doors separating both areas
+| Key     | Action                |
+|---------|------------------------|
+| W A S D | Move                  |
+| Mouse   | Look                  |
+| Space   | Jump                  |
+| E       | Interact with objects |
 
-5 collectibles scattered across the world
+---
 
-Multiple hazards that damage the player
+## 🧠 Game Logic
 
-UI that tracks progress and score
+- Player uses raycasting to interact with relics, key, door, and crystal.
+- Relics update a counter in the UI and increase score.
+- Once 3 relics are collected, the locked box becomes interactive.
+- The key appears after interacting with the box and can be picked up.
+- Door only opens if player has collected the key.
+- Final crystal activates a win message.
+- Hazards reduce health; player respawns on death.
+- Sound FX and background music enhance feedback and atmosphere.
 
-Simple audio cues and background music
+---
 
-Locked key mechanic that is unlocked by collecting all relics
+## 🛠️ Systems & Tools Used
 
-🕹️ Controls
-Key	Action
-W / A / S / D	Move player
-Mouse	Look around
-E	Interact (collect, open doors, unlock key)
-Esc	Quit
+- Unity Engine 2022.3 LTS (URP)
+- C# scripting
+- Unity Raycasting (Physics.Raycast)
+- Unity Terrain system
+- Unity UI (TextMeshPro)
+- GitHub Desktop
 
-🧠 Game Logic Overview
-Collectibles are tracked and counted via GameManager.
+---
 
-Doors unlock or open based on trigger zones or collection conditions.
+## 🖥️ Target Platform
 
-Hazards use Unity Physics for collision and damage-over-time.
+- Platform: Windows Desktop
+- Resolution: 1080p, 16:9 recommended
+- Tested on: Windows 10 + Unity Editor
 
-Key unlocks after all 3 relics are collected.
+---
 
-UI updates dynamically based on player progress.
+## 🎨 Assets & References
 
-🛠 Unity Systems Used
-Rigidbody + Collider for Physics
+- VFX: Free Fire VFX – URP (Unity Asset Store)
+- Sound Effects: soundfree.org
+- 3D Models: Self-made for 3RT assignments
+- Assistance: NP I3E AI Tutor (ChatGPT)
 
-Unity UI (TextMeshPro for prompts and counters)
+---
 
-Animator + Trigger-based Interactions
+## ⚠️ Known Bugs / Limitations
 
-AudioSource for SFX and BGM
+- Doors do not close after being opened.
+- No volume settings for background music.
+- Some transitions rely on colliders only.
 
-Tag & Layer logic for triggers (e.g. "Player", "Hazard", "Collectible")
+---
 
-📂 Project Structure
-arduino
-/Assets
-  /Scripts
-    GameManager.cs
-    PlayerController.cs
-    Collectible.cs
-    DoorController.cs
-    Hazard.cs
-    LockedBox.cs
-  /Prefabs
-  /Scenes
-  /Audio
-  /Materials
-  /Textures
-🧪 Requirements Checklist
-✅ Indoor and Outdoor areas
+## 🧩 Puzzle/Game Flow
 
-✅ Doors with interaction
+1. Player collects 3 relics around the map.
+2. The locked box becomes active and spawns the key after interaction.
+3. Player picks up the key.
+4. Door becomes accessible using the key.
+5. Final crystal appears and shows a win message on interaction.
 
-✅ 5 Collectibles
+---
 
-✅ Score counter
+## 📂 Project Folder Structure
 
-✅ UI message on completion
+Assets/
+├── Audio/
+├── Materials/
+├── Prefabs/
+├── Scenes/
+├── Scripts/
+├── Textures/
+└── VFX/
+ProjectSettings/
+README.md
 
-✅ Hazards (2 types)
+---
 
-✅ BGM and SFX
-
-✅ GitHub version control
-
-✅ XML documentation and file headers
-
-🐞 Known Issues / Limitations
-Some objects may clip through terrain on collision
-
-No health bar UI implemented yet for hazard damage
-
-Audio balance may vary depending on output device
-
-🎯 Puzzle/Hack Answers
-Unlock the key by collecting 3 relics
-
-The relics are placed: behind the waterfall, in the tower, and under the bridge
-
-The locked box becomes inactive once the key is retrieved
-
-🙏 Credits
-BGM: "Adventure Loop" by Kevin MacLeod (incompetech.com)
-
-SFX: freesound.org contributors
-
-3D Models: Unity Asset Store (Free assets), ProBuilder-created geometry
+## 🔗 GitHub Submission
+https://github.com/Jinghua2128/I3E_ASG_1
+Thank you for playing!
