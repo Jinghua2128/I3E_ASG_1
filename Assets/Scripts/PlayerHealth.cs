@@ -26,14 +26,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth; // Set current health to max at game start
         healthBar.maxValue = maxHealth; // Set slider max
         healthBar.value = currentHealth; // Initialize slider value
-        UpdateHealthColor(); // Set initial color of health bar
 
-        // Initialize audio source
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
     }
 
     /// <summary>
